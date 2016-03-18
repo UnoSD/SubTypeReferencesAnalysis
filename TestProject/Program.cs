@@ -1,9 +1,5 @@
-# SubTypeReferencesAnalysis
-
-Find usages of a base class method just when called from a specified sub class using Roslyn.
-
-Example:
-
+﻿namespace TestProject
+{
     class Program
     {
         static void Main()
@@ -30,5 +26,4 @@ Example:
     }
 
     public class DerivedTwo : Base<DerivedTwo> { }
-
-We might want to find all the usages of Create() just when the target of the invocation is DerivedOne, so far neither Visual Studio nor ReSharper provided this functionality so I wrote this tool.
+}
